@@ -1,0 +1,31 @@
+{
+	"name": "GoogleSuspiciousHighlighter",
+	"version": "1.0",
+	"author": "Loxoz",
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"description": "A Chrome Extension to Highlighter Suspicious Websites in Google search",
+	"browser_action": {
+		"default_title": "GoogleSuspiciousHighlighter",
+		"default_popup": "widget/index.html",
+		"default_icon": "icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.google.com/search*",
+				"*://*.google.fr/search*"
+			],
+			"js": ["inject.js"],
+			"css": ["inject.css"]
+		}
+	],
+	"permissions": [
+		"tabs",
+		"background"
+	],
+	"manifest_version": 2
+}
