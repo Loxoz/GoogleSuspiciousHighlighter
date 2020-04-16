@@ -1,21 +1,18 @@
-/* Will be changed later */
-let reg = /(clubic|softonic|downloadastro|soft32\.fr|telecharger\.com|malavida\.com|telecharger\.logiciel\.net|portalux\.com|sur-telecharger\.com|soft-box\.net|top-logiciels\.com|softbian\.com)/gi;
+/* Will be changed later, if i even continue? */
+const reg = /(clubic|softonic|downloadastro|soft32\.fr|telecharger\.com|malavida\.com|telecharger\.logiciel\.net|portalux\.com|sur-telecharger\.com|soft-box\.net|top-logiciels\.com|softbian\.com|inneka\.com|uptodown\.com|toucharger\.com|freedownloadmanager\.org|telecharger360\.com|download\.cnet\.com)/gi;
 
-let elems = document.querySelectorAll('.rc>.r');
+const elems = document.querySelectorAll('.rc>.r');
 for (let e of elems) {
-    if (e.innerText) {
-        if (e.innerText.match(reg)) {
-            console.log(e.innerText);
-            e.classList.add("badthing");
+    if (e.innerText && e.innerText.match(reg)) {
+        e.classList.add("badsite");
 
-            let warnEl = document.createElement("div");
-            warnEl.classList.add("badthing-warn");
-            e.prepend(warnEl);
+        let warnEl = document.createElement("div");
+        warnEl.classList.add("badsite-warn");
+        e.prepend(warnEl);
 
-            let warnTitle = document.createElement("div");
-            warnTitle.classList.add("badthing-title");
-            warnTitle.innerHTML = "This Website is Suspicious";
-            warnEl.append(warnTitle);
-        }
+        let warnTitle = document.createElement("div");
+        warnTitle.classList.add("badsite-tooltip");
+        warnTitle.innerHTML = "This website is suspicious";
+        warnEl.append(warnTitle);
     }
 }
