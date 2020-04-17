@@ -10,7 +10,7 @@
 
 ## Downloads:
 
-Go to the [**releases** tab](releases)
+Go to the [**releases** tab](https://github.com/Loxoz/GoogleSuspiciousHighlighter/releases)
 
 ## Install:
 
@@ -18,4 +18,4 @@ Since this extension is not an official chrome extension, you're gonna have to i
 
 ## Building:
 
-Because this extension uses sass, to build any changes added to the [inject.scss](blob/master/inject.scss) file, you're going to need [sass](https://sass-lang.com/), which can be installed using `npm i -g sass` then doing `sass style.scss style.css --no-source-map` to build (or even `sass style.scss style.css --no-source-map --watch` to watch for changes and rebuild directly) the [inject.css](blob/master/inject.css).
+Because this extension uses sass, to build any changes added to the [inject.scss](inject.scss) file, you're going to need [sass](https://sass-lang.com/), which can be installed using `npm i -g sass` then doing `sass style.scss style.css --no-source-map` to build (or even `sass style.scss style.css --no-source-map --watch` to watch for changes and rebuild directly) the [inject.css](inject.css).
